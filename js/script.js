@@ -4,10 +4,10 @@
 // Created on: Apr 2022
 // This file contains the JS functions for index.html
 
-"use strict"
+'use strict'
 
 /**
- * Check servie worker.
+ * Check service worker.
  */
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS2O-Unit5-04-HTML/sw.js", {
@@ -16,20 +16,23 @@ if (navigator.serviceWorker) {
 }
 
 /**
- * This function compares slider with random number.
+ * This function calculates if you get free admission
  */
-function guessClicked() {
-  var date = document.getElementById("date").value
-  var userAge = parseInt(document.getElementById("user-age").value)
-
-  if (
-    date == "tuesday" ||
-    date == "thursday" ||
-    (userAge > 12 && userAge < 21)) {
-    document.getElementById("guess-result").innerHTML =
-      "You are eligible for a discount!"
-  else {
-    document.getElementById("guess-result").innerHTML =
-      "You are not eligible for a discount."
+function myButtonClicked() {
+  // input
+  const sunday = document.getElementById("sunday").checked
+  const monday = document.getElementById("monday").checked
+  const tuesday = document.getElementById("tuesday").checked
+  const wednesday = document.getElementById("wednesday").checked
+  const thursday = document.getElementById("thursday").checked
+  const friday = document.getElementById("friday").checked
+  const saturday = document.getElementById("saturday").checked
+  var age = document.getElementById("age").value
+  
+  // process and output
+  if (tuesday == true || thursday == true && age > 12 && age < 21) {
+    document.getElementById("museum").innerHTML = 'You have to pay student admission at the museum!'
+  } else {
+    document.getElementById("museum").innerHTML = 'You have to pay regular admission at the museum!'
   }
 }

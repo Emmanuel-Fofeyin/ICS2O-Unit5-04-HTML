@@ -1,69 +1,90 @@
 <!DOCTYPE html>
+<!--- ICS2O-Unit5-04-JS -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Am I Eligible for a Discount?" />
+    <meta name="description" content="My first PWA" />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="Emmanuel Fofeyin" />
     <meta name="theme-color" content="#FFFFFF" />
-    <title>Am I Eligible for a Discount?</title>
-    <link rel="canonical" href="https://brayden-blank.github.io/ICS2O-Unit5-04-HTML/" />
+    <title>GitHub page as PWA template</title>
+    <link rel="canonical" href="https://marshall-demars.github.io/ICS2O-Unit5-04-HTML/" />
     <link rel="manifest" href="./manifest.webmanifest" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--- None blocking for Lighthouse report -->
+    <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></noscript>
-     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-green.min.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-green.min.css" /> </noscript>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.yellow-pink.min.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.yellow-pink.min.css"></noscript>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   </head>
-  <title>Am I Eligible for a Discount?</title>
+  <title>Museum Admission</title>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">Am I Eligible for a Discount?</span>
-        </div>
+    <div class = "mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class = "mdl-layout__header">
+        <div class = "mdl-layout__header-row">      
+          <span class = "mdl-layout-title">Museum Admission</span>
+        </div>       
       </header>
-      <main>
-      <main class="mdl-layout__content"> </main>
-      <p> Input today's date: </p>
-      <form action="/action_page.php"> </form>
-        <label for="date">Select Date:</label>
-        <select name="date" id="date">
-          <option value="monday">Monday</option>
-          <option value="tuesday">Tuesday</option>
-          <option value="wednesday">Wednesday</option>
-          <option value="thursday">Thursday</option>
-          <option value="friday">Friday</option>
-          <option value="saturday">Saturday</option>
-          <option value="sunday">Sunday</option>
-        </select>
+      <main class = "mdl-layout__content">
+        <img src="./images/museum.svg" alt="pizza" width="14%" height="auto" />
+        <!-- basic text -->
+        <h4>Do you want to know if you have free admission?</h4> 
         <br>
-        <p> Input your age:</p>
-      <!-- Numeric Textfield with Floating Label -->
+        <form>
+          <h5>Fill out the day you want to go and your age</h5>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect2">
+            <input type="radio" id="sunday" class="mdl-radio__button" name="options">
+            <span class="mdl-radio__label">Sunday</span>
+          </label>
+          <br>  
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect2">
+            <input type="radio" id="monday" class="mdl-radio__button" name="options">
+            <span class="mdl-radio__label">Monday</span>
+          </label>
+          <br>  
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect2">
+            <input type="radio" id="tuesday" class="mdl-radio__button" name="options">
+            <span class="mdl-radio__label">Tuesday</span>
+          </label>
+          <br>  
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect2">
+            <input type="radio" id="wednesday" class="mdl-radio__button" name="options">
+            <span class="mdl-radio__label">Wednesday</span>
+          </label>
+          <br>            
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+            <input type="radio" id="thursday" class="mdl-radio__button" name="options">
+            <span class="mdl-radio__label">Thursday</span>
+          </label>
+          <br>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+            <input type="radio" id="friday" class="mdl-radio__button" name="options">
+            <span class="mdl-radio__label">Friday</span>
+          </label>
+          <br>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+            <input type="radio" id="saturday" class="mdl-radio__button" name="options" checked>
+            <span class="mdl-radio__label">Saturday</span>
+          </label>
+        </form>
+        <!-- Numeric Textfield -->
         <form action="#">
-          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="user-age">
-            <label class="mdl-textfield__label" for="user-age">Number...</label>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="age">
+            <label class="mdl-textfield__label" for="age">Input age</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
         </form>
-        <!-- Raised button with ripple -->
-        <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"   
-          onclick="guessClicked()"
-          >
-          Input Your Guess!
+        <!-- Colored raised button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="myButtonClicked()">
+          Click
         </button>
-        <br>
-        <br>
-        <br>
-        <div id="user-info">
-          <div id="guess-result"></div>
-        </div>
+        <div id="museum"></div> 
       </main>
     </div>
   </body>
