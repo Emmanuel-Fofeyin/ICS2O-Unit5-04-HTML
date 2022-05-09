@@ -4,7 +4,7 @@
 // Created on: Apr 2022
 // This file contains the JS functions for index.html
 
-"use strict";
+"use strict"
 
 /**
  * Check servie worker.
@@ -12,7 +12,7 @@
 if (navigator.serviceWorker) {
   navigator.serviceWorker.register("/ICS2O-Unit-5-04-HTML/sw.js", {
     scope: "/ICS2O-Unit-5-04-HTML/",
-  });
+  })
 }
 
 /**
@@ -27,7 +27,7 @@ function guessClicked() {
       "You are eligible for a discount!"
   }
   else {
-    document.getElementById("guess-result").innerHTML = 
+    document.getElementById("guess-result").innerHTML =
       "You are not eligible for a discount."
   }
 }
