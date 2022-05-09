@@ -29,11 +29,11 @@ function myButtonClicked() {
   const saturday = document.getElementById("saturday").checked
   var age = document.getElementById("age").value
   // process and output
-  if (tuesday == true || thursday == true && age > 12 && age < 21) {
+  if (tuesday == true || (thursday == true && age > 12 && age < 21) {
     document.getElementById("museum").innerHTML =
-      'You have to pay student admission at the museum!'
+      "You have to pay student admission at the museum!"
   } else {
     document.getElementById("museum").innerHTML =
-      'You have to pay regular admission at the museum!'
+      "You have to pay regular admission at the museum!"
   }
 }
