@@ -26,6 +26,7 @@ function guessClicked() {
     date == "tuesday" ||
     date == "thursday" ||
     (userAge > 12 && userAge < 21)) {
+  
     document.getElementById("guess-result").innerHTML =
       "You are eligible for a discount!"
   }
