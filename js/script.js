@@ -1,6 +1,6 @@
-// Copyright (c) 2022 Brayden Blank All rights reserved
+// Copyright (c) 2022 Emmanuel-Fofeyin All rights reserved
 //
-// Created by: Brayden Blank
+// Created by: Emmanuel-Fofeyin
 // Created on: Apr 2022
 // This file contains the JS functions for index.html
 
@@ -22,7 +22,10 @@ function guessClicked() {
   var date = document.getElementById("date").value
   var userAge = parseInt(document.getElementById("user-age").value)
 
-  if ((date == "tuesday" || date == "thursday") || (userAge > 12 && userAge < 21)) {
+  if ((    
+    date == "tuesday" ||
+    date == "thursday") ||
+      (userAge > 12 && userAge < 21)){
     document.getElementById("guess-result").innerHTML = 
       "You are eligible for a discount!"
   }
